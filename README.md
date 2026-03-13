@@ -38,7 +38,7 @@ font-size: 24px; 👈 hover here
 
 A popup will show recommended values.
 
----
+--
 
 **Method 2: Autocomplete**
 
@@ -49,7 +49,7 @@ font-size: 24px;<br>
 line-height: 👈 suggestions will appear <br>
 }
 
----
+--
 
 **Method 3: Commands**
 
@@ -59,11 +59,13 @@ Press `Ctrl+Shift+P` and use:
 - `Line Height: Insert optimal for heading`<br>
 - `Line Height: Insert optimal for text`
 
----
+--
 
 **Method 4: Keyboard Shortcut**
 
 Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
+
+---
 
 ## 🚀 Settings
 
@@ -104,6 +106,7 @@ Released under the [MIT License](https://raw.githubusercontent.com/ovcharovcoder
 ---
 
 Happy coding with perfect typography!
+
 
 
 ## 🧑‍💻 Development & Build
