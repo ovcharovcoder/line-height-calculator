@@ -138,22 +138,23 @@ Happy coding with perfect typography!
 
 **Install & Build**
 
-# Clone the repository
+## Clone the repository
 
 `git clone https://github.com/ovcharovcoder/line-height-calculator.git`<br>
 `cd line-height-calculator`
 
-# Install dependencies
+## Install dependencies
 
 `npm install`
 
-# Install VS Code extension manager globally
+## Install VS Code extension manager globally
 
 `npm install -g @vscode/vsce`
 
-# Package the extension
+## Package the extension
 
 `vsce package`
+
 
 
 
