@@ -62,7 +62,7 @@ Examle CSS:
 ```
 .element {
 font-size: 24px;<br>
-line-height: 👈 suggestions will appear <br>
+line-height: 👈 suggestions will appear
 }
 ```
 
@@ -91,8 +91,8 @@ Customize the extension in VS Code settings (`Ctrl+,` or `Cmd+,`):
 JSON:<br>
 ```
 {
-"lineHeightCalculator.defaultHeading": 1.2,<br>
-"lineHeightCalculator.defaultText": 1.5<br>
+"lineHeightCalculator.defaultHeading": 1.2,
+"lineHeightCalculator.defaultText": 1.5
 }
 ```
 
@@ -154,6 +154,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
