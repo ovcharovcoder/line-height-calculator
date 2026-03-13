@@ -51,8 +51,8 @@ line-height: 👈 suggestions will appear <br>
 
 Press `Ctrl+Shift+P` and use:
 
-- `Line Height: Calculate for current font-size`
-- `Line Height: Insert optimal for heading`
+- `Line Height: Calculate for current font-size`<br>
+- `Line Height: Insert optimal for heading`<br>
 - `Line Height: Insert optimal for text`
 
 **Method 4: Keyboard Shortcut**
@@ -64,9 +64,9 @@ Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 Customize the extension in VS Code settings (`Ctrl+,`):
 
 JSON:
-{
-"lineHeightCalculator.defaultHeading": 1.2,
-"lineHeightCalculator.defaultText": 1.5
+{<br>
+"lineHeightCalculator.defaultHeading": 1.2,<br>
+"lineHeightCalculator.defaultText": 1.5<br>
 }
 
 ---
