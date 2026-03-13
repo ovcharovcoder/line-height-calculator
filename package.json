@@ -1,0 +1,77 @@
+{
+  "name": "line-height-calculator",
+  "displayName": "Line Height Calculator",
+  "description": "Calculates optimal line-height based on font-size",
+  "version": "1.0.0",
+  "publisher": "ovcharovcoder",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovcharovcoder/line-height-calculator.git"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:css",
+    "onLanguage:scss",
+    "onLanguage:less"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "line-height-calculator.calculate",
+        "title": "Line Height: Calculate for current font-size"
+      },
+      {
+        "command": "line-height-calculator.insertHeading",
+        "title": "Line Height: Insert optimal for heading"
+      },
+      {
+        "command": "line-height-calculator.insertText",
+        "title": "Line Height: Insert optimal for text"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "line-height-calculator.calculate",
+        "key": "ctrl+alt+l",
+        "mac": "cmd+alt+l"
+      }
+    ],
+    "configuration": {
+      "title": "Line Height Calculator",
+      "properties": {
+        "lineHeightCalculator.defaultHeading": {
+          "type": "number",
+          "default": 1.2,
+          "description": "Default line-height multiplier for headings"
+        },
+        "lineHeightCalculator.defaultText": {
+          "type": "number",
+          "default": 1.5,
+          "description": "Default line-height multiplier for text"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --minify",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.19.12",
+    "typescript": "^5.3.3"
+  }
+}
