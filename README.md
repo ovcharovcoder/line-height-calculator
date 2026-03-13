@@ -48,7 +48,7 @@ This extension is built on real design research and standards:
 
 Examle CSS:
 ```
-// Hover over any font-size value <br>
+// Hover over any font-size value
 font-size: 24px; 👈 hover here to see recommendations
 ```
 
@@ -154,6 +154,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
