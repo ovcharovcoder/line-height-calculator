@@ -40,13 +40,13 @@ export function activate(context: vscode.ExtensionContext) {
         {
           label: `✨ ${optimal.multiplier} (${optimal.value}px) — Optimal`,
           description: optimal.description,
-          value: optimal.multiplier.toString()
+          value: optimal.multiplier.toString(),
         },
         {
           label: `📏 ${optimal.value}px — Exact value`,
           description: optimal.description,
-          value: `${optimal.value}px`
-        }
+          value: `${optimal.value}px`,
+        },
       ];
 
       const selected = await vscode.window.showQuickPick(items, {
