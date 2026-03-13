@@ -38,6 +38,8 @@ font-size: 24px; 👈 hover here
 
 A popup will show recommended values.
 
+---
+
 **Method 2: Autocomplete**
 
 Examle CSS:
@@ -47,6 +49,8 @@ font-size: 24px;<br>
 line-height: 👈 suggestions will appear <br>
 }
 
+---
+
 **Method 3: Commands**
 
 Press `Ctrl+Shift+P` and use:
@@ -54,6 +58,8 @@ Press `Ctrl+Shift+P` and use:
 - `Line Height: Calculate for current font-size`<br>
 - `Line Height: Insert optimal for heading`<br>
 - `Line Height: Insert optimal for text`
+
+---
 
 **Method 4: Keyboard Shortcut**
 
@@ -98,6 +104,7 @@ Released under the [MIT License](https://raw.githubusercontent.com/ovcharovcoder
 ---
 
 Happy coding with perfect typography!
+
 
 ## 🧑‍💻 Development & Build
 
