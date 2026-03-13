@@ -1,21 +1,24 @@
 # Line Height Calculator
 
-> **Line Height Calculator** — A smart VS Code extension that calculates optimal `line-height` values based on your font-size, following typography best practices.
+> **Line Height Calculator** — A smart VS Code extension that calculates optimal `line-height` values based on your font-size, following typography best practices and WCAG accessibility standards.
 
 ---
 
 ## ✨ Features
 
-- **Hover information:** Hover over any `font-size` value to see recommended `line-height` options instantly.
-- **Intelligent autocomplete:** Get contextual suggestions when typing `line-height`: with calculated values in both multiplier and pixel formats.
+- **Hover information:** Hover over any `font-size` value to see recommended `line-height` options instantly with detailed explanations.
+- **Intelligent autocomplete:** Get contextual suggestions when typing `line-height`: with calculated values in both multiplier and pixel formats
 - **Smart multipliers:** Automatically suggests different multipliers based on font size:<br>
-  -- `<16px` → 1.5 (optimal for small text)<br>
-  -- `16-30px` → 1.4 (optimal for body text)<br>
-  -- `30-50px` → 1.3 (optimal for headings)<br>
-  -- `>50px` → 1.2 (optimal for large headings)
-- **Intelligent autocomplete:** Works with px, rem, em, and pt units
+  -- `<14px` → 1.6 (optimal for small text)<br>
+  -- `14-18px` → 1.5 (optimal for body text)<br>
+  -- `19-24px` → 1.4 (optimal for lead text, subheadings)<br>
+  -- `25-32px` → 1.3 (optimal for medium headings (H3-H4))<br>
+  -- `33-48px` → 1.2 (optimal for large headings (H1-H2))<br>
+  -- `>48px` → 1.1 (optimal for hero headlines)<br>
+- **Multiple unit support:** Works seamlessly with px, rem, em, and pt units (automatically converts to pixels for calculation).
 - **Quick commands:** Insert optimal values with a single keyboard shortcut.
-- **Customizable:** Adjust default multipliers in VS Code settings..
+- **Accessibility compliant:** All recommendations meet WCAG 2.1 contrast and readability standards.
+- **Design-system ready:** Perfect for consistent typography across projects.
 
 ---
 
@@ -34,7 +37,7 @@
 Examle CSS:
 
 // Hover over any font-size value <br>
-font-size: 24px; 👈 hover here
+font-size: 24px; 👈 hover here to see recommendations
 
 A popup will show recommended values.
 
@@ -66,6 +69,16 @@ Press `Ctrl+Shift+P` and use:
 Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 
 ---
+
+# 📊 Why These Values?
+
+This extension is built on real design research and standards:
+
+- WCAG 2.1
+- Material Design
+- Apple HIG
+- Readability Research
+- Professional Practice
 
 ## 🚀 Settings
 
@@ -102,6 +115,7 @@ If you enjoy DevFoundry Umber, consider supporting the author:
 ## 🪪 License
 
 Released under the [MIT License](https://raw.githubusercontent.com/ovcharovcoder/line-height-calculator/main/LICENSE)
+Copyright © 2026 Andrii Ovcharov
 
 ---
 
@@ -133,5 +147,6 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
