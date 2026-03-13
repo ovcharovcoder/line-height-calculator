@@ -22,6 +22,18 @@
 
 ---
 
+## 📊 Why These Values?
+
+This extension is built on real design research and standards:
+
+- WCAG 2.1
+- Material Design
+- Apple HIG
+- Readability Research
+- Professional Practice
+
+---
+
 ## 🛠 Installation
 
 1. Open **VS Code → Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`).
@@ -70,16 +82,6 @@ Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 
 ---
 
-## 📊 Why These Values?
-
-This extension is built on real design research and standards:
-
-- WCAG 2.1
-- Material Design
-- Apple HIG
-- Readability Research
-- Professional Practice
-
 ## 🚀 Settings
 
 Customize the extension in VS Code settings (`Ctrl+,`):
@@ -121,6 +123,7 @@ Copyright © 2026 Andrii Ovcharov
 
 Happy coding with perfect typography!
 
+
 ## 🧑‍💻 Development & Build
 
 **Requirements**
@@ -147,6 +150,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
