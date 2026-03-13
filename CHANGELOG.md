@@ -2,8 +2,6 @@
 
 All notable changes to the **Line Height Calculator** VS Code extension will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## [1.0.1] - 2026-03-13
 
 ### Added
@@ -33,7 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
-## [1.0.0] - 2026-01-20
+## [1.0.0] - 2026-03-13
 
 ### Added
 - **Initial release** of Line Height Calculator
@@ -48,18 +46,3 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Commands for inserting optimal heading/text values
 - Keyboard shortcut `Ctrl+Alt+L` (Windows/Linux) / `Cmd+Alt+L` (macOS)
 - Configuration settings for default multipliers
-
----
-
-## 📦 Installation
-
-```bash
-# Install from VS Code Marketplace
-ext install line-height-calculator
-
-# Or package locally
-git clone https://github.com/ovcharovcoder/line-height-calculator.git
-cd line-height-calculator
-npm install
-npm run package
-code --install-extension line-height-calculator-1.0.1.vsix
