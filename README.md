@@ -70,7 +70,7 @@ Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 
 ---
 
-# 📊 Why These Values?
+## 📊 Why These Values?
 
 This extension is built on real design research and standards:
 
@@ -147,6 +147,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
