@@ -84,7 +84,7 @@ Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 
 ## 🚀 Settings
 
-Customize the extension in VS Code settings (`Ctrl+,`):
+Customize the extension in VS Code settings (`Ctrl+,` or `Cmd+,`):
 
 JSON:<br>
 {<br>
@@ -150,6 +150,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
