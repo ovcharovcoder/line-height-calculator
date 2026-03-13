@@ -63,7 +63,7 @@ Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
 
 Customize the extension in VS Code settings (`Ctrl+,`):
 
-JSON:
+JSON:<br>
 {<br>
 "lineHeightCalculator.defaultHeading": 1.2,<br>
 "lineHeightCalculator.defaultText": 1.5<br>
