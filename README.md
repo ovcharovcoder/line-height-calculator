@@ -8,10 +8,10 @@
 
 - **Hover information:** Hover over any `font-size` value to see recommended `line-height` options instantly.
 - **Intelligent autocomplete:** Get contextual suggestions when typing `line-height`: with calculated values in both multiplier and pixel formats.
-- **Smart multipliers:** Automatically suggests different multipliers based on font size:
-  -- `<16px` → 1.5 (optimal for small text)
-  -- `16-30px` → 1.4 (optimal for body text)
-  -- `30-50px` → 1.3 (optimal for headings)
+- **Smart multipliers:** Automatically suggests different multipliers based on font size:<br>
+  -- `<16px` → 1.5 (optimal for small text)<br>
+  -- `16-30px` → 1.4 (optimal for body text)<br>
+  -- `30-50px` → 1.3 (optimal for headings)<br>
   -- `>50px` → 1.2 (optimal for large headings)
 - **Intelligent autocomplete:** Works with px, rem, em, and pt units
 - **Quick commands:** Insert optimal values with a single keyboard shortcut.
