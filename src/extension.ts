@@ -32,16 +32,25 @@ export function activate(context: vscode.ExtensionContext) {
       const fontSize = LineHeightCalculator.parseFontSizeValue(match[0]);
       if (!fontSize) return;
 
-      // Show QuickPick with variants
-      const variants = LineHeightCalculator.getVariants(fontSize);
-      const items = variants.map(v => ({
-        label: `${v.multiplier} (${v.value}px)`,
-        description: v.description,
-        detail: `${v.multiplier} × ${fontSize}px = ${v.value}px`,
-      }));
+      // Get optimal variant
+      const optimal = LineHeightCalculator.getOptimalVariant(fontSize);
+
+      // Show QuickPick with options
+      const items = [
+        {
+          label: `✨ ${optimal.multiplier} (${optimal.value}px) — Optimal`,
+          description: optimal.description,
+          value: optimal.multiplier.toString()
+        },
+        {
+          label: `📏 ${optimal.value}px — Exact value`,
+          description: optimal.description,
+          value: `${optimal.value}px`
+        }
+      ];
 
       const selected = await vscode.window.showQuickPick(items, {
-        placeHolder: 'Select line-height value',
+        placeHolder: `Select line-height for ${fontSize}px font`,
       });
 
       if (selected) {
@@ -49,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
         await editor.edit(editBuilder => {
           editBuilder.insert(
             selection.end,
-            `\nline-height: ${selected.label.split(' ')[0]};`,
+            `\nline-height: ${selected.value};`,
           );
         });
       }
