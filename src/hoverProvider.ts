@@ -28,29 +28,31 @@ export class LineHeightHoverProvider implements vscode.HoverProvider {
     const markdown = new vscode.MarkdownString();
     markdown.appendMarkdown(`## 📐 Line Height Calculator\n\n`);
     markdown.appendMarkdown(`**Font size:** ${fontSize}px\n\n`);
-    
+
     // Show optimal value prominently
     markdown.appendMarkdown(`### ✨ Optimal value:\n\n`);
     markdown.appendMarkdown(
       `**${optimal.multiplier}** → **${optimal.value}px**  \n` +
-      `_${optimal.description}_\n\n`
+        `_${optimal.description}_\n\n`,
     );
-    
+
     // Show comparison table
     markdown.appendMarkdown(`### 📊 Common alternatives:\n\n`);
     markdown.appendMarkdown(`| Style | Multiplier | Value |\n`);
     markdown.appendMarkdown(`|-------|------------|-------|\n`);
-    
+
     allVariants.forEach(v => {
       const isOptimal = v.multiplier === optimal.multiplier;
       const style = isOptimal ? '✨ **Optimal**' : v.description;
       markdown.appendMarkdown(
-        `| ${style} | ${v.multiplier} | ${v.value}px |\n`
+        `| ${style} | ${v.multiplier} | ${v.value}px |\n`,
       );
     });
-    
+
     markdown.appendMarkdown(`\n---\n`);
-    markdown.appendMarkdown(`💡 **Pro tip:** Press **Ctrl+Alt+L** to insert optimal value\n`);
+    markdown.appendMarkdown(
+      `💡 **Pro tip:** Press **Ctrl+Alt+L** to insert optimal value\n`,
+    );
     markdown.appendMarkdown(`📝 Based on professional design practices`);
 
     markdown.isTrusted = true;
