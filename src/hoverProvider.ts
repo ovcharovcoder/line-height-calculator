@@ -21,30 +21,38 @@ export class LineHeightHoverProvider implements vscode.HoverProvider {
 
     if (!fontSize) return null;
 
-    // Create hover content
-    const variants = LineHeightCalculator.getVariants(fontSize);
-    const recommended = LineHeightCalculator.getRecommendedMultiplier(fontSize);
-    const recommendedValue = LineHeightCalculator.calculate(
-      fontSize,
-      recommended,
-    );
+    // Get optimal variant and all variants for display
+    const optimal = LineHeightCalculator.getOptimalVariant(fontSize);
+    const allVariants = LineHeightCalculator.getAllVariants(fontSize);
 
     const markdown = new vscode.MarkdownString();
     markdown.appendMarkdown(`## 📐 Line Height Calculator\n\n`);
     markdown.appendMarkdown(`**Font size:** ${fontSize}px\n\n`);
+    
+    // Show optimal value prominently
+    markdown.appendMarkdown(`### ✨ Optimal value:\n\n`);
     markdown.appendMarkdown(
-      `**Recommended:** ${recommended} (${recommendedValue}px)\n\n`,
+      `**${optimal.multiplier}** → **${optimal.value}px**  \n` +
+      `_${optimal.description}_\n\n`
     );
-    markdown.appendMarkdown(`### Options:\n\n`);
-
-    variants.forEach(v => {
-      const isRecommended = v.multiplier === recommended;
+    
+    // Show comparison table
+    markdown.appendMarkdown(`### 📊 Common alternatives:\n\n`);
+    markdown.appendMarkdown(`| Style | Multiplier | Value |\n`);
+    markdown.appendMarkdown(`|-------|------------|-------|\n`);
+    
+    allVariants.forEach(v => {
+      const isOptimal = v.multiplier === optimal.multiplier;
+      const style = isOptimal ? '✨ **Optimal**' : v.description;
       markdown.appendMarkdown(
-        `- ${v.multiplier} → **${v.value}px** — ${v.description} ${isRecommended ? '⭐' : ''}\n`,
+        `| ${style} | ${v.multiplier} | ${v.value}px |\n`
       );
     });
+    
+    markdown.appendMarkdown(`\n---\n`);
+    markdown.appendMarkdown(`💡 **Pro tip:** Press **Ctrl+Alt+L** to insert optimal value\n`);
+    markdown.appendMarkdown(`📝 Based on professional design practices`);
 
-    markdown.appendMarkdown(`\n> Press Ctrl+Alt+L to calculate`);
     markdown.isTrusted = true;
 
     return new vscode.Hover(markdown, range);
