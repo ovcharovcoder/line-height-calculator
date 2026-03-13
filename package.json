@@ -2,7 +2,7 @@
   "name": "line-height-calculator",
   "displayName": "Line Height Calculator",
   "description": "Calculates optimal line-height based on font-size",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "ovcharovcoder",
   "icon": "icon.png",
   "repository": {
