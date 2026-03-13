@@ -24,7 +24,7 @@ export class LineHeightCompletionProvider
     if (!fontSize) return null;
 
     const items: vscode.CompletionItem[] = [];
-    
+
     // Get optimal variant
     const optimal = LineHeightCalculator.getOptimalVariant(fontSize);
 
@@ -37,9 +37,9 @@ export class LineHeightCompletionProvider
     multiplierItem.detail = `${optimal.description} — ${optimal.value}px`;
     multiplierItem.documentation = new vscode.MarkdownString(
       `**✨ Optimal for ${fontSize}px**\n\n` +
-      `${optimal.multiplier} × ${fontSize}px = **${optimal.value}px**\n\n` +
-      `👉 ${optimal.description}\n\n` +
-      `Based on professional design practices.`
+        `${optimal.multiplier} × ${fontSize}px = **${optimal.value}px**\n\n` +
+        `👉 ${optimal.description}\n\n` +
+        `Based on professional design practices.`,
     );
     multiplierItem.sortText = '000'; // Make it appear first
     items.push(multiplierItem);
@@ -62,8 +62,11 @@ export class LineHeightCompletionProvider
 
     alternatives.forEach(alt => {
       if (alt.multiplier >= 1.0 && alt.multiplier <= 1.8) {
-        const altValue = LineHeightCalculator.calculate(fontSize, alt.multiplier);
-        
+        const altValue = LineHeightCalculator.calculate(
+          fontSize,
+          alt.multiplier,
+        );
+
         // Multiplier alternative
         const altItem = new vscode.CompletionItem(
           `${alt.multiplier.toFixed(1)} (${altValue}px)`,
@@ -73,7 +76,7 @@ export class LineHeightCompletionProvider
         altItem.detail = `${alt.description} — ${altValue}px`;
         altItem.documentation = new vscode.MarkdownString(
           `${alt.multiplier.toFixed(1)} × ${fontSize}px = **${altValue}px**\n\n` +
-          `${alt.description} alternative`
+            `${alt.description} alternative`,
         );
         altItem.sortText = '002';
         items.push(altItem);
