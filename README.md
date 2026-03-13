@@ -119,7 +119,7 @@ Happy coding with perfect typography!
 
 # Clone the repository
 
-`git clone https://github.com/ovcharovcoder/line-height-calculator.git`
+`git clone https://github.com/ovcharovcoder/line-height-calculator.git`<br>
 `cd line-height-calculator`
 
 # Install dependencies
@@ -133,4 +133,5 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
