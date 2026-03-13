@@ -24,31 +24,70 @@ export class LineHeightCompletionProvider
     if (!fontSize) return null;
 
     const items: vscode.CompletionItem[] = [];
-    const variants = LineHeightCalculator.getVariants(fontSize);
+    
+    // Get optimal variant
+    const optimal = LineHeightCalculator.getOptimalVariant(fontSize);
 
-    variants.forEach(v => {
-      const item = new vscode.CompletionItem(
-        `${v.multiplier} (${v.value}px)`,
-        vscode.CompletionItemKind.Value,
-      );
+    // Add multiplier option (optimal)
+    const multiplierItem = new vscode.CompletionItem(
+      `${optimal.multiplier} (${optimal.value}px) ✨`,
+      vscode.CompletionItemKind.Value,
+    );
+    multiplierItem.insertText = optimal.multiplier.toString();
+    multiplierItem.detail = `${optimal.description} — ${optimal.value}px`;
+    multiplierItem.documentation = new vscode.MarkdownString(
+      `**✨ Optimal for ${fontSize}px**\n\n` +
+      `${optimal.multiplier} × ${fontSize}px = **${optimal.value}px**\n\n` +
+      `👉 ${optimal.description}\n\n` +
+      `Based on professional design practices.`
+    );
+    multiplierItem.sortText = '000'; // Make it appear first
+    items.push(multiplierItem);
 
-      item.insertText = v.multiplier.toString();
-      item.detail = `${v.description} — ${v.value}px`;
-      item.documentation = new vscode.MarkdownString(
-        `**${v.multiplier}** × ${fontSize}px = **${v.value}px**\n\n` +
-          `Recommended for: ${v.description}`,
-      );
+    // Add exact pixel value option
+    const pxItem = new vscode.CompletionItem(
+      `${optimal.value}px ✨`,
+      vscode.CompletionItemKind.Value,
+    );
+    pxItem.insertText = `${optimal.value}px`;
+    pxItem.detail = `exact value — ${optimal.description}`;
+    pxItem.sortText = '001';
+    items.push(pxItem);
 
-      items.push(item);
+    // Add common alternatives (tight/loose)
+    const alternatives = [
+      { multiplier: optimal.multiplier - 0.1, description: 'tight' },
+      { multiplier: optimal.multiplier + 0.1, description: 'loose' },
+    ];
 
-      // Add exact pixel value
-      const pxItem = new vscode.CompletionItem(
-        `${v.value}px`,
-        vscode.CompletionItemKind.Value,
-      );
-      pxItem.insertText = `${v.value}px`;
-      pxItem.detail = `exact value for ${v.description}`;
-      items.push(pxItem);
+    alternatives.forEach(alt => {
+      if (alt.multiplier >= 1.0 && alt.multiplier <= 1.8) {
+        const altValue = LineHeightCalculator.calculate(fontSize, alt.multiplier);
+        
+        // Multiplier alternative
+        const altItem = new vscode.CompletionItem(
+          `${alt.multiplier.toFixed(1)} (${altValue}px)`,
+          vscode.CompletionItemKind.Value,
+        );
+        altItem.insertText = alt.multiplier.toFixed(1);
+        altItem.detail = `${alt.description} — ${altValue}px`;
+        altItem.documentation = new vscode.MarkdownString(
+          `${alt.multiplier.toFixed(1)} × ${fontSize}px = **${altValue}px**\n\n` +
+          `${alt.description} alternative`
+        );
+        altItem.sortText = '002';
+        items.push(altItem);
+
+        // Pixel alternative
+        const altPxItem = new vscode.CompletionItem(
+          `${altValue}px`,
+          vscode.CompletionItemKind.Value,
+        );
+        altPxItem.insertText = `${altValue}px`;
+        altPxItem.detail = `exact value — ${alt.description}`;
+        altPxItem.sortText = '003';
+        items.push(altPxItem);
+      }
     });
 
     return items;
