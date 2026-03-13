@@ -60,7 +60,7 @@ A popup will show recommended values.
 
 Examle CSS:
 ```
-.element {<br>
+.element {
 font-size: 24px;<br>
 line-height: 👈 suggestions will appear <br>
 }
@@ -154,6 +154,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
