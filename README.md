@@ -87,7 +87,7 @@ JSON:<br>
   width="60"
 />
 
-Andriy Ovcharov  
+Andrii Ovcharov  
 📧 ovcharovcoder@gmail.com
 
 ---
