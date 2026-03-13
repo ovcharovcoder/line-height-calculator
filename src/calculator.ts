@@ -53,12 +53,14 @@ export class LineHeightCalculator {
   /**
    * Gets optimal variant for a specific font size
    */
-  static getOptimalVariant(
-    fontSize: number,
-  ): { multiplier: number; value: number; description: string } {
+  static getOptimalVariant(fontSize: number): {
+    multiplier: number;
+    value: number;
+    description: string;
+  } {
     const multiplier = this.getRecommendedMultiplier(fontSize);
     const description = this.getDescriptionForFontSize(fontSize);
-    
+
     return {
       multiplier,
       value: this.calculate(fontSize, multiplier),
@@ -73,10 +75,10 @@ export class LineHeightCalculator {
     fontSize: number,
   ): Array<{ multiplier: number; value: number; description: string }> {
     const optimal = this.getRecommendedMultiplier(fontSize);
-    
+
     // Show 5 most relevant variants around the optimal value
     const variants = [];
-    
+
     // Add tighter options
     if (optimal - 0.2 >= 1.0) {
       variants.push({
@@ -92,14 +94,14 @@ export class LineHeightCalculator {
         description: 'tight',
       });
     }
-    
+
     // Add optimal
     variants.push({
       multiplier: optimal,
       value: this.calculate(fontSize, optimal),
       description: '✨ optimal',
     });
-    
+
     // Add looser options
     if (optimal + 0.1 <= 1.8) {
       variants.push({
@@ -115,7 +117,7 @@ export class LineHeightCalculator {
         description: 'very loose',
       });
     }
-    
+
     return variants;
   }
 
