@@ -47,9 +47,10 @@ This extension is built on real design research and standards:
 **Method 1: Hover**
 
 Examle CSS:
-
+```
 // Hover over any font-size value <br>
 font-size: 24px; 👈 hover here to see recommendations
+```
 
 A popup will show recommended values.
 
@@ -151,6 +152,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
