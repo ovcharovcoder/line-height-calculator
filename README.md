@@ -59,7 +59,7 @@ A popup will show recommended values.
 **Method 2: Autocomplete**
 
 Examle CSS:
-```css
+```
 .element {<br>
 font-size: 24px;<br>
 line-height: 👈 suggestions will appear <br>
@@ -152,6 +152,7 @@ Happy coding with perfect typography!
 # Package the extension
 
 `vsce package`
+
 
 
 
