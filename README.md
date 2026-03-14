@@ -79,8 +79,9 @@ Press `Ctrl+Shift+P` and use:
 --
 
 **Method 4: Keyboard Shortcut**
-
-Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation.
+1. Select the line `font-size`
+2. Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation
+3. Press Enter.
 
 ---
 
