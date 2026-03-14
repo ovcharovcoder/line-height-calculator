@@ -79,9 +79,10 @@ Press `Ctrl+Shift+P` and use:
 --
 
 **Method 4: Keyboard Shortcut**
-1. Select the line `font-size`
+1. Select the rule `font-size: 24px`
 2. Press `Ctrl+Alt+L` (Windows/Linux) or `Cmd+Alt+L` (Mac) for quick calculation
 3. Press Enter.
+4. After this we get the value `line-height: 1.4;`
 
 ---
 
