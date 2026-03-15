@@ -1,5 +1,10 @@
 # Line Height Calculator
 
+<img 
+   src="https://raw.githubusercontent.com/ovcharovcoder/line-height-calculator/main/images/icon.png"
+  alt="icon"
+  width="150"
+/>
 > **Line Height Calculator** — A smart VS Code extension that calculates optimal `line-height` values based on your `font-size`, following typography best practices and **WCAG accessibility standards**.
 
 ---
