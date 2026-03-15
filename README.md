@@ -99,6 +99,13 @@ Press Ctrl+Shift+P (or Cmd+Shift+P on Mac) and use:
 
 ---
 
+## 🇺🇦 Ukrainian User Guide
+
+You can view the user guide in Ukrainian here:  
+[**📘 Line Height Calculator - Інструкція українською**](https://drive.google.com/file/d/1F6mCwMUyogqBgb6m-0w-gqMZb1uRx0Vk/view?usp=sharing)
+
+---
+
 ## ⚙️ Settings
 
 Customize the extension in VS Code settings (Ctrl+, or Cmd+,):
