@@ -161,7 +161,7 @@ p {
 <img
   src="https://raw.githubusercontent.com/ovcharovcoder/line-height-calculator/main/images/avatar.png"
   alt="Andrii Ovcharov"
-  width="60"
+  width="80"
 />
 
 Andrii Ovcharov<br>
