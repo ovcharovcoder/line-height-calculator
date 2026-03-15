@@ -173,6 +173,8 @@ Copyright © 2026 Andrii Ovcharov
 
 Happy coding with perfect typography!
 
+---
+
 
 ## 🧑‍💻 Development & Build
 
