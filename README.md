@@ -169,7 +169,7 @@ If you enjoy DevFoundry Umber, consider supporting the author:
 Released under the [MIT License](https://raw.githubusercontent.com/ovcharovcoder/line-height-calculator/main/LICENSE)
 Copyright © 2026 Andrii Ovcharov
 
----
+
 
 Happy coding with perfect typography!
 
